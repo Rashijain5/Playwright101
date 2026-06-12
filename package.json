@@ -1,0 +1,29 @@
+{
+  "name": "playwright101",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000P\u0000l\u0000a\u0000y\u0000w\u0000r\u0000i\u0000g\u0000h\u0000t\u00001\u00000\u00001\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:headed": "playwright test --headed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rashijain5/Playwright101.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Rashijain5/Playwright101/issues"
+  },
+  "homepage": "https://github.com/Rashijain5/Playwright101#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.3",
+    "dotenv": "^17.4.2"
+  }
+}
