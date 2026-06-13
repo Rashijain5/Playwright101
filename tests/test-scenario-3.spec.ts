@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import test, { expect } from "../lambdatest-setup";
 
 test.describe("Input Form Submit", () => {
   test("should validate form submission with all fields", async ({ page }) => {
@@ -14,7 +14,7 @@ test.describe("Input Form Submit", () => {
     await expect(msg).toHaveAttribute('required','');
 
     //Ensure all elements are fully loaded 
-    await page.waitForLoadState("networkidle");
+    await page.waitForLoadState('networkidle');
 
     // Step 4 & 5 & 6: Fill in all fields
     await page.locator('#name').fill('Steve');

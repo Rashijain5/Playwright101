@@ -1,9 +1,12 @@
-import { test, expect } from "@playwright/test";
+import test, { expect } from "../lambdatest-setup";
 
 test.describe("Drag & Drop Sliders", () => {
   test("should drag slider from default 15 to 95", async ({ page }) => {
     // Step 1: Open the Selenium Playground page
     await page.goto("https://www.testmuai.com/selenium-playground/");
+
+    //Ensure all elements are fully loaded 
+    await page.waitForLoadState('networkidle');
 
     // Click "Drag & Drop Sliders" (using text locator)
     await page.getByText("Drag & Drop Sliders").click();

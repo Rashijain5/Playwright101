@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import test, { expect } from "../lambdatest-setup";
 
 test.describe("Simple Form Demo Validation", () => {
   test("should validate simple form message display", async ({ page }) => {
@@ -15,7 +15,7 @@ test.describe("Simple Form Demo Validation", () => {
     const msg = "Welcome to TestMu AI";
 
    //Ensure all elements are fully loaded 
-   await page.waitForLoadState("networkidle");
+    await page.waitForLoadState('networkidle', { timeout: 90000 });
 
     // Step 5: Enter the message in the "Enter Message" text box
     await page.getByPlaceholder("Please enter your Message").fill(msg);
